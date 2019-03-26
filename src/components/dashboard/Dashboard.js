@@ -4,9 +4,8 @@ import ProjectList from '../projects/ProjectList';
 import { connect } from 'react-redux';
 
 class Dashboard extends Component {
-	render() {
-		//console.log(this.props);
-		const { projects } = this.props;
+	render() {		
+		const {projects} = this.props;
 		return (
 			<div className="dashboard cointainer">
 				<div className="row">
