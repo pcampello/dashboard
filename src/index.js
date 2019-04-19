@@ -11,6 +11,8 @@ import { reduxFirestore, getFirestore } from 'redux-firestore';
 import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
 import fbConfig from './config/fbConfig';
 
+// PROJECT RETIRED FROM "THE NET NINJA" youtube channel. playlist = https://www.youtube.com/watch?v=Oi4v5uxTY5o&list=PL4cUxeGkcC9iWstfXntcj8f-dFZ4UtlN3
+
 
 const store = createStore(rootReducer, 
 	compose(
