@@ -1,4 +1,6 @@
 export const createProject = (project) => {
+	
+
 	return (dispatch, getState, { getFirebase, getFirestore }) => {
 		// make async call to database
 		const firestore = getFirestore();
@@ -19,3 +21,22 @@ export const createProject = (project) => {
 
 	}
 }
+
+
+export const deleteProject = (id) => {
+	
+	//dispatch({ type: 'DELETE_PROJECT', id });
+
+	return (dispatch, getState, { getFirebase, getFirestore }) => {
+		const firestore = getFirestore();		
+		firestore.collection('projects').doc(id).delete()
+		.then(() => {
+			dispatch({ type: 'DELETE_PROJECT', id });
+		}).catch((err) => {
+			dispatch({ type: 'DELETE_PROJECT_ERROR', err });
+		});
+		
+
+	}
+}
+
